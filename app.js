@@ -17,8 +17,16 @@ function addTodo(event) {
     const newTodo = document.createElement('li');
     newTodo.classList.add('todo-item');
     newTodo.innerText = todoInput.value
-    todoDiv.appendChild(newTodo);
-
+    if(todoInput.value===''){
+        alert("Please enter text")
+        return;
+        
+    }else{
+        todoDiv.appendChild(newTodo);
+    }
+    
+   
+    
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fas fa-check"></i>';
     completedButton.classList.add("complete-btn");
@@ -53,9 +61,10 @@ function deleteCheck(e) {
     }
 }
 function filterTodo(e){
+    
 let todos= todoList.childNodes;
 //console.log(todos)
-todos.forEach(function(todo){
+todos.forEach(function(todo) {
     switch(e.target.value){
         case "all":
            //todo.style.display:"flex";
@@ -63,7 +72,7 @@ todos.forEach(function(todo){
         case "completed":
             if(todo.classList.contains("completed")){
                 todo.style.display="flex";
-                
+                                
             }else{
                 todo.style.display="none";
             }break;
