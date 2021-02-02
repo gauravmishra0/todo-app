@@ -1,0 +1,160 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box
+}
+
+body {
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12););
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.25rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    min-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+form input,
+form button {
+    padding: 0.25rem;
+    font-size: 1.5rem;
+    border: none;
+    position: relative;
+    background: white;
+   
+}
+
+form button {
+    color: #00bf72;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #00bf72;
+    color: rgb(255, 255, 255);
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.todo-list {
+    min-width: 30%;
+    
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+    color: white;>
+    background: #ff6f47;
+    border: none;
+    padding: 0.65rem;
+    cursor : pointer;
+    font-size: 0.65rem;
+}
+.trash-btn{
+    background: #9c2b2bc9;
+}
+.complete-btn {
+    background: rgba(32, 148, 32, 0.849);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateY(180deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+   
+   
+}
+select{
+    background: white;
+    color: #00bf72;
+    width: 8.2rem;
+    cursor: pointer;
+    padding: 0.6rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #00bf72;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background:white;
+    color: #00bf72;
+}
+@media screen and (max-width:480px){
+    header,
+form{
+    padding: 1rem;
+    margin-left: 0.35rem;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo-button{
+    left: 10.8rem;
+    bottom: 2.23rem;
+}
+
+}
